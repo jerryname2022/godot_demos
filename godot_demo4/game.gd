@@ -66,7 +66,10 @@ func updateSkyAnimation(speed):
 	# 
 	if sky1.position.x > -700:
 		sky1.position.x -= speed
+	else:
+		sky1.position.x = sky2.position.x + 1200 - speed
+		
+	if sky2.position.x > -700:	
 		sky2.position.x -= speed
 	else:
-		sky1.position.x = 600
-		sky2.position.x = 1800
+		sky2.position.x = sky1.position.x + 1200 - speed
